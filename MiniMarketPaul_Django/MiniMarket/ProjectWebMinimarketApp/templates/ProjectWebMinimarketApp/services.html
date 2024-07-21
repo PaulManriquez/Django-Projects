@@ -1,0 +1,17 @@
+{% extends "./base.html"%}
+{% load static %}
+
+{% block Title %} Services {% endblock %}
+
+<!---->
+{% block content%}
+  {% for service in Services %}
+    <div>
+      <p>
+        <h2>{{service.Title}}</h2>
+        <p>{{service.Content}}</p>
+        <p><img src='{{service.Image.url}}'></p>
+      </p>
+    </div>
+  {% endfor %}
+{% endblock %}

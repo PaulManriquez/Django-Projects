@@ -1,0 +1,76 @@
+5432
+#Start
+			  #Name of your directory 
+django-admin startproject mysite
+
+#Create a sub module of your app 
+			  #Name of your new app 
+python manage.py startapp ordersManage
+
+#Check if a new module was installed in your main app correctly 
+python manage.py check ordersManage
+
+#Run aplication 
+python manage.py runserver
+
+#====== Data bases ===========
+
+#Export your databases created
+python manage.py makemigrations
+
+#Generate sql code by Django
+			    #Name of the project were is the model database | number model	
+python manage.py sqlmigrate ordersManage 0001
+
+#Tell to Django to use this code | Go
+python manage.py migrate
+
+#Open shell in python 
+python manage.py shell 
+
+#ORM
+     #File name where is        #Name data base
+     #The modesl	
+from ordersManage.models import Items
+
+#create a new sql object
+item = Items(Name='Table',Section='Decoration',Price=90)
+#insert in the data base 
+item.save()
+
+#Create and insert  directly
+item = Items.objects.create(Name='Table',Section='Decoration',Price=90)
+
+#Update 
+item.price = 95
+item.save()
+
+#Delete
+del1 = Items.objects.get(id=1,2,3,)
+del1.delete()
+
+#SELECT with query 
+List = Items.objects.filter(Price=90)
+List #Print
+
+#GET all rows
+List = Items.objects.all()
+
+*******************************************
+Every time you make a change in your models
+you should update it:
+* python manage.py makemigrations
+* python manage.py migrate 
+*******************************************
+
+#Print all in the table:
+     #File where is your model | Model name	
+from ordersManage.models import Orders
+Orders.objects.all() #Get all the objects 
+
+#===========================================
+#===========================================
+#Create a super user command, and fill the data 
+python manage.py createsuperuser
+
+

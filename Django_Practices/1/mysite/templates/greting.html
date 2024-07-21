@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gretting</title>
+</head>
+<body>
+    <h2>Welcome from Django im {{name}} {{message}}</h2>
+    <p>Current time: {{Time.day}} / {{Time.month}} / {{Time.year}}</p>
+    <p>My full name is:</p>
+    <ul>
+        {% for name in FullName %}
+            <ol>
+                {{name}}
+            </ol>
+        {% endfor %}
+    </ul>
+
+    {% if Profesor == 1 %}
+        <h3>Profesor</h3>
+    {%else%}
+        <h3>Student</h3>    
+    {% endif %}
+</body>
+</html>

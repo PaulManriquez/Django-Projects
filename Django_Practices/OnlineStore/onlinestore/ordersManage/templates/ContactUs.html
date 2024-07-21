@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body>
+    
+    <form action="/Contact_Us/" method="POST"> {% csrf_token %}
+        <p>Issue: <input type="text" name="Issue"></p>
+        <p>Email: <input type="text" name="Email"></p>
+        <p>Mesaje: <textarea name="Message" rows="8" cols="30"></textarea></p>
+        <input type="submit" value="Send">    
+    </form>
+
+</body>
+</html>
