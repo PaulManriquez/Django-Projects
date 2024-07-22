@@ -1,6 +1,6 @@
 from django.urls import path 
 
-from ProjectWebMinimarketApp import views
+from ServicesApp import views
 
 #======= Adding where to search in media files ========= 
 #To be able to see the media in the administration panel
@@ -9,10 +9,7 @@ from django.conf.urls.static import static
 #=======================================================
 
 urlpatterns = [
-    path('',views.Home,name='Home'),
-    path('Store/',views.Store,name='Store'),
-    path('Blog/',views.Blog,name='Blog'),
-    path('Contact/',views.Contact,name='Contact'),
+    path('',views.Services,name='Services'),
 ]
 
 #======= Adding where to search in media files ========= 

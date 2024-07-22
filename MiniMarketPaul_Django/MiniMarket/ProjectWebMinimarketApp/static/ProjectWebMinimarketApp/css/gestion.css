@@ -1,3 +1,8 @@
+/*THIS IS CODE MADE BY PAUL*/
+.Image-Width{
+  width: 50%;
+}
+
 body {
   font-family: 'Lora';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/MainBackG.jpg");
@@ -279,3 +284,5 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
+
