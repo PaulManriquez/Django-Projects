@@ -1,0 +1,38 @@
+{% extends "ProjectWebMinimarketApp/base.html" %}
+  {% load static %}
+
+  {% block Title %} Blog {% endblock %}
+
+{% block content%}
+  {% for post in Posts %}
+    <section class="page-section clearfix">
+      <div class="container">
+        <div class="intro">
+          <img class="Image-Width intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{post.Image.url}}" alt="" style="width: 50%;">
+          <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+            <h2 class="section-heading mb-4" >
+              <span class="section-heading-upper">{{post.Content}}</span>
+              <span class="section-heading-lower">{{post.Title}} </span>
+            </h2>
+            <div class="Author-blog">
+                Author:{{post.Author}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endfor %}
+
+  <!--Display Every Category-->
+  <section>
+    <div class="categories-blog">
+      Categories:
+      {% for post in Posts%}
+        {% for category in post.Categories.all %}
+          {{category.Name}}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

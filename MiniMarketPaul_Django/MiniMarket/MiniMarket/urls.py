@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('ProjectWebMinimarketApp.urls')),
     path('Services/',include('ServicesApp.urls')),
+    path('Blog/',include('BlogApp.urls')),
 ]
