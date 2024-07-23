@@ -23,4 +23,5 @@ urlpatterns = [
     path('',include('ProjectWebMinimarketApp.urls')),
     path('Services/',include('ServicesApp.urls')),
     path('Blog/',include('BlogApp.urls')),
+    path('Contacts/',include('ContactApp.urls')),
 ]

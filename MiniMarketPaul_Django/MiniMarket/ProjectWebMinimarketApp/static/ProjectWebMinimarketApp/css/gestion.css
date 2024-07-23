@@ -13,6 +13,42 @@
   text-align: center;
   color: white;
 }
+
+.Linksblog {
+  color: white;
+  font-size: 15px;
+}
+
+.Linksblog:hover{
+  color: blue;
+  text-decoration: none;
+}
+
+.Form-contac{
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: aqua;
+  /*Setting margin: auto for the left and right margins instructs the browser 
+  to equally distribute the remaining space on both sides of the element. 
+  Since width is the half of all the space available, margin auto takes the left and right to the center*/
+  margin: 10px auto;
+  width: 50%;
+}
+
+.Form-contact-form{
+  text-align: center;
+}
+.Table-contact{
+  margin: 20px auto; /*<--- Sends to the center*/
+}
+
+.Btn-contact{
+  width: 30%;
+}
+
+
 body {
   font-family: 'Lora';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/MainBackG.jpg");
@@ -294,5 +330,6 @@ ul.errorlist{
   font-style: italic;
   color: red;
 }
+
 
 

@@ -11,5 +11,3 @@ def Store(request):
     return render(request,'ProjectWebMinimarketApp/store.html')
 
 
-def Contact(request):
-    return render(request,'ProjectWebMinimarketApp/contact.html')

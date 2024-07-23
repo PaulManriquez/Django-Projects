@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'ProjectWebMinimarketApp',
     'ServicesApp',
     'BlogApp',
+    'ContactApp',
 ]
 
 MIDDLEWARE = [

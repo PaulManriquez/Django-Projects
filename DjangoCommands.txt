@@ -1,3 +1,4 @@
+ctrl + f5 = Reload the page and clear the cache 
 5432
 #Start
 			  #Name of your directory 

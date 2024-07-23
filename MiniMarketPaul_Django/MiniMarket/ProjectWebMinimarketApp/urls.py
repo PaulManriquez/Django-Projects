@@ -11,7 +11,6 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('',views.Home,name='Home'),
     path('Store/',views.Store,name='Store'),
-    path('Contact/',views.Contact,name='Contact'),
 ]
 
 #======= Adding where to search in media files ========= 

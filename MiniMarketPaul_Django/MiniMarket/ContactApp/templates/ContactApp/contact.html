@@ -1,0 +1,16 @@
+{% extends "ProjectWebMinimarketApp/base.html" %}
+  {% load static %}
+
+  {% block Title %} Contact {% endblock %}
+
+  {% block content%}
+  
+  <div class="Form-contac">
+    <form action="" method="POST" class="Form-contact-form">{%csrf_token%}
+        <table class="Table-contact">
+          {{Form_Contact.as_table}}
+        </table>
+        <input type="submit" value="Send" class="Btn-contact">
+    </form>    
+  </div>  
+  {% endblock %}
