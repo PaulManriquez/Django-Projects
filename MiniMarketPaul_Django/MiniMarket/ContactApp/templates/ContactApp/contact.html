@@ -6,7 +6,12 @@
   {% block content%}
   
   <div class="Form-contac">
-    <form action="" method="POST" class="Form-contact-form">{%csrf_token%}
+    {% if  'valid' in request.GET %}
+      <h3>The data was send successfully</h3>
+    {% elif 'novalid' in request.GET%}  
+      <h3>Error sending email</h3>
+    {% endif %}
+    <form x action="" method="POST" class="Form-contact-form">{%csrf_token%}
         <table class="Table-contact">
           {{Form_Contact.as_table}}
         </table>
