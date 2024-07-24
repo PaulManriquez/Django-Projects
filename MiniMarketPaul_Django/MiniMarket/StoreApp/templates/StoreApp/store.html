@@ -1,0 +1,25 @@
+{% extends "ProjectWebMinimarketApp/base.html" %}
+  {% load static %}
+
+  {% block Title %} Store {% endblock %}
+
+{% block content%}
+  
+<div class="container">
+  <div class="row">
+    {% for Product in Products %}
+    <!--Displaying based on 3 cols, then it goes to the next row-->
+    <!--Bootstrap is based in max 12 cols, so 12/3 = 4 (col-md-3)-->
+    <div class="col-md-3 mb-4">
+      <div class="card" style="width: 100%; margin: 5px 5px;">
+        <img src="{{Product.Image.url}}" class="card-img-top" alt="Card image cap">
+        <div class="card-body" style="text-align: center;">
+            <h7 class="card-title">{{Product.Name}}</h7>
+            <p class="card-text">{{Product.Price}}</p>
+        </div>
+      </div>
+    </div>  
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
