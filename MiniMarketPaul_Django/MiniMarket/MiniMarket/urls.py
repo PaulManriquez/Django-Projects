@@ -25,4 +25,5 @@ urlpatterns = [
     path('Blog/',include('BlogApp.urls')),
     path('Contacts/',include('ContactApp.urls')),
     path('Store/',include('StoreApp.urls')),
+    path('Cart/',include('CartApp.urls')),
 ]

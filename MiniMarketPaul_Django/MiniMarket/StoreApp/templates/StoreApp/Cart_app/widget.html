@@ -1,0 +1,42 @@
+<table class="table table-bordered" style="color: white;">
+    
+                            <!--Head table-->
+    <thead>
+        <tr><th colspan="3" class="text-center"> My Cart </th></tr>
+         <tr><th>Product</th> <th>Quantity</th> <th>sub total</th></tr>
+    </thead>
+
+                            <!--Body Table-->
+    <tbody>
+        <!--ALL THIS DATA COMES FROM Cart.py THAT CREATE A SESSION CART-->
+                <!--Retrieve the data from the cart in SESSION-->
+        {% if request.session.cart.items %}<!--If in the session exist cart.items-->
+        {% for key, product in request.session.cart.items %}<!--Pass through each product and display it-->
+            <!--////////Row////////-->
+            <tr class="text-center">
+                <td>{{product.Name}}</td>
+                <td>{{product.Quantity}}</td>
+                <td>
+                    <a href="{% url 'Cart:Dec' product.Product_id%}" class="btn btn-sm btn-success">-</a>
+                    <a href="{% url 'Cart:Add' product.Product_id%}" class="btn btn-sm btn-success">+</a>
+                    {{product.SubTotal}}
+                </td>
+            </tr>
+        {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="3"><div class="alert alert-danger text-center">No products added</div></td>
+            </tr>
+        {% endif %}
+    </tbody> 
+    
+    <!--Foot-->
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                Total: $ {{Total_Pay }}
+            </td>
+        </tr>
+    </tfoot>
+
+</table>
