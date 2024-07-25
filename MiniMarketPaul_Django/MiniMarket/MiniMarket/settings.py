@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'ContactApp',
     'StoreApp',
     'CartApp',
+    'AuthenticationApp',
 ]
 
 MIDDLEWARE = [
