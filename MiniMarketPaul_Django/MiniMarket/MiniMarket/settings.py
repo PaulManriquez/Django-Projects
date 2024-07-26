@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import os 
+from django.contrib.messages import constants as Error_Messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -147,3 +148,12 @@ EMAIL_USE_TLS = True
 EMAIL_PORT = 587 
 EMAIL_HOST_USER = 'paulmanriquezengineer@gmail.com'
 EMAIL_HOST_PASSWORD = ''
+
+#Custom Messages 
+MESSAGE_TAGS ={
+    Error_Messages.DEBUG: 'debug',
+    Error_Messages.INFO: 'info',
+    Error_Messages.SUCCESS: 'success',
+    Error_Messages.WARNING: 'warning',
+    Error_Messages.ERROR: 'danger',
+}

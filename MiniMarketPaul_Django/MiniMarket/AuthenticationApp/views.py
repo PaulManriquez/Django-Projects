@@ -46,7 +46,7 @@ def LogIn(request):
             else:
                 messages.error(request,'User error authentication/No valid')
         else:
-            messages.error(request,'Login Successfully')        
+            messages.error(request,'Credentials no valids')        
 
     form = AuthenticationForm()
     return render(request,'authenticationapp/login.html',{'form':form})
