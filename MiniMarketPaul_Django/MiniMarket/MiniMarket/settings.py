@@ -45,7 +45,12 @@ INSTALLED_APPS = [
     'StoreApp',
     'CartApp',
     'AuthenticationApp',
+    'crispy_forms',
+    'crispy_bootstrap4',
 ]
+#Upload cripy on bootstrap 
+CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
