@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'AuthenticationApp',
     'crispy_forms',
     'crispy_bootstrap4',
+    'OrdersApp',
 ]
 #Upload cripy on bootstrap 
 CRISPY_ALLOWED_TEMPLATE_PACK = 'bootstrap4'

@@ -61,3 +61,6 @@ class Cart:
         self.session['cart']={} #<-- Set the cart to nothing 
         self.session.modified = True #<-- Save changes 
 
+    def items(self):
+        return self.cart.items()  # <-- Return the items in the cart    
+

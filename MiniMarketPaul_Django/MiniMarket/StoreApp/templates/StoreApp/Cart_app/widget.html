@@ -37,6 +37,15 @@
                 Total: $ {{Total_Pay }}
             </td>
         </tr>
+
+        {%if request.session.cart.items %}
+        <tr>
+            <td colspan="3" style="text-align: center;">
+                <a href="{% url 'ToPay:Pay' %}" class="btn btn-success">Pay</a>
+            </td>
+        </tr>
+        {% endif %}
+
     </tfoot>
 
 </table>
